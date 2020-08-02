@@ -3,8 +3,13 @@ export default class CarService{
         return[
             {
                 id:1,
-                title:'the car',
-                model:'x7'
+                name:'BMW',
+                model:'x7',
+            },
+            {
+                id:2,
+                name:'mercedes',
+                model:'325',
             }
         ]
     }

@@ -1,10 +1,10 @@
 import React from 'react';
-import { CarStoreServiceConsumer } from './../car-service-context'
+import { CarstoreServiceConsumer } from './../car-service-context'
 
 const withCarStoreService = ( ) => (Wrapped) =>{
     return (props) =>{
         return(
-        <CarStoreServiceConsumer>
+        <CarstoreServiceConsumer>
             {
                 (carService)=>{
                    return(
@@ -12,7 +12,7 @@ const withCarStoreService = ( ) => (Wrapped) =>{
                    ) 
                 }
             }
-        </CarStoreServiceConsumer>
+        </CarstoreServiceConsumer>
         );
     }
 }
