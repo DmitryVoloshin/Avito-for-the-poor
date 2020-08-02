@@ -1,10 +1,10 @@
 import{
-    CarStoreServiceProvider,
-    CarStoreServiceConsumer
-} from './car-service-context'
+    CarstoreServiceProvider,
+    CarstoreServiceConsumer
+} from './car-service-context';
 
 
 export{
-    CarStoreServiceProvider,
-    CarStoreServiceConsumer
-}
+    CarstoreServiceProvider,
+    CarstoreServiceConsumer
+};
