@@ -1,7 +1,7 @@
 import React from 'react';
 import { CarstoreServiceConsumer } from './../car-service-context'
 
-const withCarStoreService = ( ) => (Wrapped) =>{
+const withCarstoreService = ( ) => (Wrapped) =>{
     return (props) =>{
         return(
         <CarstoreServiceConsumer>
@@ -17,4 +17,4 @@ const withCarStoreService = ( ) => (Wrapped) =>{
     }
 }
 
-export default withCarStoreService
+export default withCarstoreService
