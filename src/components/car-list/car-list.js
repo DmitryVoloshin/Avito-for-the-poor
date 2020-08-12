@@ -2,14 +2,15 @@ import React from 'react';
 import CarListItem from '../car-list-item';
 import { connect } from 'react-redux'
 
-import withCarstoreService from './../hoc/with-carstore-service';
+import {withCarstoreService} from './../hoc';
 
 class CarList extends React.Component{
 
     componentDidMount(){
         const { carService } = this.props;
         const data = carService.getCars();
-        console.log(data)
+
+        this.props.carsLoaded(data);
     }
     
     render(){
@@ -34,4 +35,15 @@ const mapStateToProps = ( { cars } ) =>{
     return{ cars };
 };
 
-export default withCarstoreService(connect(mapStateToProps)(CarList));
+const mapDispatchToProps = ( dispatch ) =>{
+    return{
+        carsLoaded : ( newCars ) =>{
+            dispatch({
+                type:'CARS_LAODED',
+                payload: newCars
+            })
+        }
+    }
+};
+
+export default withCarstoreService(connect(mapStateToProps,mapDispatchToProps)(CarList));

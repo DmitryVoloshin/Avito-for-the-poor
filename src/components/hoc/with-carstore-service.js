@@ -7,8 +7,8 @@ const withCarstoreService = ( ) => (Wrapped) =>{
         <CarstoreServiceConsumer>
             {
                 (carService)=>{
-                   return(
-                     <Wrapped {...props} carService={carService}/>
+                   return(<Wrapped {...props} 
+                    carService={carService}/>
                    ) 
                 }
             }
@@ -17,4 +17,4 @@ const withCarstoreService = ( ) => (Wrapped) =>{
     }
 }
 
-export default withCarstoreService
+export default withCarstoreService;
